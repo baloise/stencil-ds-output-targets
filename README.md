@@ -4,7 +4,7 @@
 | --------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------- | ---------------------------------------------------------- |
 | Angular Output Target | [`@baloise/angular-output-target`](https://www.npmjs.com/package/@baloise/angular-output-target) | [![npm][npm-badge-angular]][npm-badge-angular-url] | [![license][npm-license-angular]][npm-license-angular-url] |
 | Vue Output Target     | [`@baloise/vue-output-target`](https://www.npmjs.com/package/@baloise/vue-output-target)         | [![npm][npm-badge-vue]][npm-badge-vue-url]         | [![license][npm-license-vue]][npm-license-vue-url]       |
-| Vue 2 Output Target   | [`@baloise/vue-2-output-target`](https://www.npmjs.com/package/@baloise/vue-2-output-target)     | [![npm][npm-badge-vue-2]][npm-badge-vue-2-url]     | [![license][npm-license-2-vue]][npm-license-vue-2-url]       |
+| Vue 2 Output Target   | [`@baloise/vue-2-output-target`](https://www.npmjs.com/package/@baloise/vue-2-output-target)     | [![npm][npm-badge-vue-2]][npm-badge-vue-2-url]     | [![license][npm-license-vue-2]][npm-license-vue-2-url]       |
 
 # Introduction
 
@@ -181,12 +181,12 @@ import { MyComponent } from '@my-project/vue'
 [npm-badge-angular]: https://img.shields.io/npm/v/@baloise/angular-output-target.svg
 [npm-badge-angular-url]: https://www.npmjs.com/package/@baloise/angular-output-target
 [npm-license-angular ]: https://img.shields.io/npm/l/@baloise/angular-output-target.svg
-[npm-license-angular-url]: https://github.com/baloise/stencil-ds-plugins/blob/master/packages/angular-output-target/LICENSE.md
+[npm-license-angular-url]: https://github.com/baloise/stencil-ds-output-targets/blob/master/packages/angular-output-target/LICENSE.md
 [npm-badge-vue]: https://img.shields.io/npm/v/@baloise/vue-output-target.svg
 [npm-badge-vue-url]: https://www.npmjs.com/package/@baloise/vue-output-target
 [npm-license-vue ]: https://img.shields.io/npm/l/@baloise/vue-output-target.svg
-[npm-license-vue-url]: https://github.com/baloise/stencil-ds-plugins/blob/master/packages/vue-output-target/LICENSE.md
+[npm-license-vue-url]: https://github.com/baloise/stencil-ds-output-targets/blob/master/packages/vue-output-target/LICENSE.md
 [npm-badge-vue-2]: https://img.shields.io/npm/v/@baloise/vue-2-output-target.svg
 [npm-badge-vue-2-url]: https://www.npmjs.com/package/@baloise/vue-2-output-target
 [npm-license-vue-2 ]: https://img.shields.io/npm/l/@baloise/vue-2-output-target.svg
-[npm-license-vue-2-url]: https://github.com/baloise/stencil-ds-plugins/blob/master/packages/vue-2-output-target/LICENSE.md
+[npm-license-vue-2-url]: https://github.com/baloise/stencil-ds-output-targets/blob/master/packages/vue-2-output-target/LICENSE.md
