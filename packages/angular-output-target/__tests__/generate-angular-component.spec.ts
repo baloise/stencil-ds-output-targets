@@ -74,7 +74,7 @@ export declare interface MyComponent extends Components.MyComponent {}
 })
 export class MyComponent {
   /**  */
-  my-event!: EventEmitter<boolean>;
+  my-event!: EventEmitter<CustomEvent<boolean>>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -150,9 +150,9 @@ export declare interface MyComponent extends Components.MyComponent {}
 })
 export class MyComponent {
   /**  */
-  my-event!: EventEmitter<BalTabOption>;
+  my-event!: EventEmitter<CustomEvent<BalTabOption>>;
   /**  */
-  my-event-two!: EventEmitter<BalTabOption>;
+  my-event-two!: EventEmitter<CustomEvent<BalTabOption>>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -210,7 +210,7 @@ export declare interface MyComponent extends Components.MyComponent {}
 })
 export class MyComponent {
   /**  */
-  my-event!: EventEmitter<MouseEvent>;
+  my-event!: EventEmitter<CustomEvent<MouseEvent>>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();

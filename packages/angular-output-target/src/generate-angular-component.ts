@@ -79,7 +79,7 @@ export class ${tagNameAsPascal} {`,
     lines.push(
       `  /** ${output.docs.text} ${output.docs.tags.map((tag) => `@${tag.name} ${tag.text}`)}*/`,
     );
-    lines.push(`  ${output.name}!: EventEmitter<${output.complexType.resolved}>;`);
+    lines.push(`  ${output.name}!: EventEmitter<CustomEvent<${output.complexType.resolved}>>;`);
   });
 
   lines.push('  protected el: HTMLElement;');
