@@ -1,6 +1,6 @@
 {
   "name": "@baloise/angular-output-target",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "Angular output target for @stencil/core components.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",

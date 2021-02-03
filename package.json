@@ -17,7 +17,7 @@
     "build": "lerna run build",
     "test": "lerna run test",
     "changelog": "lerna-changelog",
-    "release": "lerna publish --yes --force-publish --conventional-commits"
+    "release": "lerna publish --yes --force-publish"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
