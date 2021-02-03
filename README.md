@@ -3,8 +3,8 @@
 | Project               | Package                                                                                          | Version                                            | License                                                    |
 | --------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------- | ---------------------------------------------------------- |
 | Angular Output Target | [`@baloise/angular-output-target`](https://www.npmjs.com/package/@baloise/angular-output-target) | [![npm][npm-badge-angular]][npm-badge-angular-url] | [![license][npm-license-angular]][npm-license-angular-url] |
-| Vue Output Target     | [`@baloise/vue-output-target`](https://www.npmjs.com/package/@baloise/vue-output-target)         | [![npm][npm-badge-vue]][npm-badge-vue-url]         | [![license][npm-license-vue]][npm-license-vue-2-url]       |
-| Vue 2 Output Target   | [`@baloise/vue-2-output-target`](https://www.npmjs.com/package/@baloise/vue-2-output-target)     | [![npm][npm-badge-vue-2]][npm-badge-vue-2-url]     | [![license][npm-license-2-vue]][npm-license-vue-url]       |
+| Vue Output Target     | [`@baloise/vue-output-target`](https://www.npmjs.com/package/@baloise/vue-output-target)         | [![npm][npm-badge-vue]][npm-badge-vue-url]         | [![license][npm-license-vue]][npm-license-vue-url]       |
+| Vue 2 Output Target   | [`@baloise/vue-2-output-target`](https://www.npmjs.com/package/@baloise/vue-2-output-target)     | [![npm][npm-badge-vue-2]][npm-badge-vue-2-url]     | [![license][npm-license-2-vue]][npm-license-vue-2-url]       |
 
 # Introduction
 
@@ -175,7 +175,7 @@ import { DemoComponent } from 'component-library-vue'
 We can simply import the components we need after installing the package.
 
 ```ts
-import { MyComponent } from '@my-project/svelte'
+import { MyComponent } from '@my-project/vue'
 ```
 
 [npm-badge-angular]: https://img.shields.io/npm/v/@baloise/angular-output-target.svg
