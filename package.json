@@ -1,0 +1,47 @@
+{
+  "name": "root",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baloise/stencil-ds-output-targets.git"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Gery Hirschfeld",
+    "email": "gerhard.hirschfeld@baloise.ch",
+    "url": "https://github.com/hirsch88"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "postinstall": "npm run bootstrap",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "changelog": "lerna-changelog",
+    "release": "lerna publish --yes --force-publish --conventional-commits"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@stencil/core": "^2.4.0",
+    "@types/jest": "^26.0.20",
+    "husky": "^4.3.0",
+    "jest": "^26.6.3",
+    "lerna": "^3.22.1",
+    "lerna-changelog": "^1.0.1",
+    "prettier": "^2.2.1",
+    "rimraf": "^2.7.1",
+    "rollup": "^2.38.4",
+    "ts-jest": "^26.5.0",
+    "typescript": "^4.1.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
