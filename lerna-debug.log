@@ -1,0 +1,8 @@
+73 warn complete Waiting for 2 child processes to exit. CTRL-C to exit immediately.
+74 error Error: Command failed: git tag @baloise/angular-output-target@1.0.3 -m @baloise/angular-output-target@1.0.3
+74 error fatal: tag '@baloise/angular-output-target@1.0.3' already exists
+74 error
+74 error     at makeError (/Users/hirsch/dev/baloise/stencil-ds-output-targets/node_modules/execa/index.js:174:9)
+74 error     at /Users/hirsch/dev/baloise/stencil-ds-output-targets/node_modules/execa/index.js:278:16
+74 error     at processTicksAndRejections (node:internal/process/task_queues:93:5)
+74 error     at async Promise.all (index 0)
