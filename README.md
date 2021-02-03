@@ -1,10 +1,10 @@
 > This project is based on the [ionic-team/stencil-ds-output-targets](https://github.com/ionic-team/stencil-ds-output-targets)
 
-| Project                | Package                                                                                          | Version                                              | License                                                    |
-| ---------------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | ---------------------------------------------------------- |
-| Angular Output Target  | [`@baloise/angular-output-target`](https://www.npmjs.com/package/@baloise/angular-output-target) | [![npm][npm-badge-angular]][npm-badge-angular-url]   | [![license][npm-license-angular]][npm-license-angular-url] |
-| Vue Output Target      | [`@baloise/vue-output-target`](https://www.npmjs.com/package/@baloise/vue-output-target)         | [![npm][npm-badge-vue]][npm-badge-vue-url]           | [![license][npm-license-vue]][npm-license-vue-2-url]    |
-| Vue Next Output Target | [`@baloise/vue-output-target`](https://www.npmjs.com/package/@baloise/vue-2-output-target)    | [![npm][npm-badge-vue-2]][npm-badge-vue-2-url] | [![license][npm-license-2-vue]][npm-license-vue-url]    |
+| Project               | Package                                                                                          | Version                                            | License                                                    |
+| --------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------- | ---------------------------------------------------------- |
+| Angular Output Target | [`@baloise/angular-output-target`](https://www.npmjs.com/package/@baloise/angular-output-target) | [![npm][npm-badge-angular]][npm-badge-angular-url] | [![license][npm-license-angular]][npm-license-angular-url] |
+| Vue Output Target     | [`@baloise/vue-output-target`](https://www.npmjs.com/package/@baloise/vue-output-target)         | [![npm][npm-badge-vue]][npm-badge-vue-url]         | [![license][npm-license-vue]][npm-license-vue-2-url]       |
+| Vue 2 Output Target   | [`@baloise/vue-2-output-target`](https://www.npmjs.com/package/@baloise/vue-2-output-target)     | [![npm][npm-badge-vue-2]][npm-badge-vue-2-url]     | [![license][npm-license-2-vue]][npm-license-vue-url]       |
 
 # Introduction
 
@@ -37,8 +37,8 @@ With bindings the web components get wrapped in an Angular component and then im
 To make use of the AngularOutputPlugin first import it into your stencil.config.ts file. Then add it as an OutputTarget.
 
 ```ts
-import { Config } from '@stencil/core';
-import { angularOutputTarget, ValueAccessorConfig } from '@stencil/angular-output-target';
+import { Config } from '@stencil/core'
+import { angularOutputTarget, ValueAccessorConfig } from '@stencil/angular-output-target'
 
 export const config: Config = {
   namespace: 'demo',
@@ -52,7 +52,7 @@ export const config: Config = {
       type: 'dist',
     },
   ],
-};
+}
 ```
 
 #### componentCorePackage
@@ -134,8 +134,8 @@ catchEvent($event) {
 ### Stencil Config setup
 
 ```ts
-import { Config } from '@stencil/core';
-import { vueOutputTarget } from '@stencil/vue-output-target';
+import { Config } from '@stencil/core'
+import { vueOutputTarget } from '@stencil/vue-output-target'
 
 export const config: Config = {
   namespace: 'demo',
@@ -149,7 +149,7 @@ export const config: Config = {
       type: 'dist',
     },
   ],
-};
+}
 ```
 
 #### componentCorePackage
@@ -167,7 +167,7 @@ There is an example component library package available on Github so that you ca
 ### Usage
 
 ```ts
-import { DemoComponent } from 'component-library-vue';
+import { DemoComponent } from 'component-library-vue'
 ```
 
 ### Consumption
@@ -175,7 +175,7 @@ import { DemoComponent } from 'component-library-vue';
 We can simply import the components we need after installing the package.
 
 ```ts
-import { MyComponent } from '@my-project/svelte';
+import { MyComponent } from '@my-project/svelte'
 ```
 
 [npm-badge-angular]: https://img.shields.io/npm/v/@baloise/angular-output-target.svg
