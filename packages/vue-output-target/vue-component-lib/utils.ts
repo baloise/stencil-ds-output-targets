@@ -146,7 +146,7 @@ export const defineContainer = <Props>(
           ref: containerRef,
           class: getElementClasses(containerRef, classes),
           onClick: handleClick,
-          onVnodeBeforeMount: modelUpdateEvent === undefined ? onVnodeBeforeMount : undefined,
+          onVnodeBeforeMount: onVnodeBeforeMount,
         }
 
         if (modelProp) {
