@@ -1,8 +1,8 @@
-import { ComponentCompilerMeta, ComponentCompilerTypeReferences } from '@stencil/core/internal';
-import { createComponentDefinition } from '../src/generate-angular-component';
+import { ComponentCompilerMeta, ComponentCompilerTypeReferences } from '@stencil/core/internal'
+import { createComponentDefinition } from '../src/generate-angular-component'
 
 describe('createComponentDefinition', () => {
-  const generateComponent = createComponentDefinition('component-library', '', '');
+  const generateComponent = createComponentDefinition('component-library', '', '')
 
   test('should create a Angular component', () => {
     const finalText = generateComponent({
@@ -13,9 +13,8 @@ describe('createComponentDefinition', () => {
       methods: [],
       sourceFilePath: '',
       componentClassName: 'MyComponent',
-    } as ComponentCompilerMeta);
+    } as ComponentCompilerMeta)
     expect(finalText).toEqual(`
-
 
 export declare interface MyComponent extends Components.MyComponent {}
 
@@ -30,8 +29,8 @@ export class MyComponent {
     c.detach();
     this.el = r.nativeElement;
   }
-}`);
-  });
+}`)
+  })
 
   test('should create a Angular component with an event', () => {
     const finalText = generateComponent({
@@ -60,10 +59,9 @@ export class MyComponent {
       methods: [],
       sourceFilePath: '',
       componentClassName: 'MyComponent',
-    } as ComponentCompilerMeta);
+    } as ComponentCompilerMeta)
     expect(finalText).toEqual(`
 
-import { MyComponent as IMyComponent } from 'component-library';
 export declare interface MyComponent extends Components.MyComponent {}
 
 @Component({
@@ -81,8 +79,8 @@ export class MyComponent {
     this.el = r.nativeElement;
     proxyOutputs(this, this.el, ['my-event']);
   }
-}`);
-  });
+}`)
+  })
 
   test('should create a Angular component with a event with a custom type', () => {
     const references: ComponentCompilerTypeReferences = {
@@ -90,7 +88,7 @@ export class MyComponent {
         location: 'import',
         path: './bal-tab.type',
       },
-    };
+    }
 
     const finalText = generateComponent({
       tagName: 'my-component',
@@ -135,11 +133,10 @@ export class MyComponent {
       methods: [],
       sourceFilePath: '',
       componentClassName: 'MyComponent',
-    } as ComponentCompilerMeta);
+    } as ComponentCompilerMeta)
 
     expect(finalText).toEqual(`
 import { BalTabOption } from '@baloise/ui-library';
-import { MyComponent as IMyComponent } from 'component-library';
 export declare interface MyComponent extends Components.MyComponent {}
 
 @Component({
@@ -159,15 +156,15 @@ export class MyComponent {
     this.el = r.nativeElement;
     proxyOutputs(this, this.el, ['my-event', 'my-event-two']);
   }
-}`);
-  });
+}`)
+  })
 
   test('should create a Angular component with a event with a custom type', () => {
     const references: ComponentCompilerTypeReferences = {
       MouseEvent: {
         location: 'global',
       },
-    };
+    }
 
     const finalText = generateComponent({
       tagName: 'my-component',
@@ -195,11 +192,10 @@ export class MyComponent {
       methods: [],
       sourceFilePath: '',
       componentClassName: 'MyComponent',
-    } as ComponentCompilerMeta);
+    } as ComponentCompilerMeta)
 
     expect(finalText).toEqual(`
 
-import { MyComponent as IMyComponent } from 'component-library';
 export declare interface MyComponent extends Components.MyComponent {}
 
 @Component({
@@ -217,6 +213,6 @@ export class MyComponent {
     this.el = r.nativeElement;
     proxyOutputs(this, this.el, ['my-event']);
   }
-}`);
-  });
-});
+}`)
+  })
+})
