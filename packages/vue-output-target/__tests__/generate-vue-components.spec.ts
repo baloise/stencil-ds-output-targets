@@ -1,4 +1,4 @@
-import { createComponentDefinition } from '../src/generate-vue-component';
+import { createComponentDefinition } from '../src/generate-vue-component'
 
 describe('createComponentDefinition', () => {
   it('should create a Vue component with the render method using createCommonRender', () => {
@@ -10,16 +10,20 @@ describe('createComponentDefinition', () => {
       tagName: 'my-component',
       methods: [],
       events: [],
-    });
+    })
 
-    expect(output).toEqual(`
-export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-component',
-  [],
-  [],
-  
-);
-`);
-  });
+    expect(output).toEqual(`export const MyComponent = /*@__PURE__*/ defineComponent({
+  name: 'my-component',
+  props: {
+
+  },
+  emits: {
+
+  },
+  setup: defineSetup('my-component', [], undefined)
+})
+`)
+  })
 
   it('should pass event references to the createCommonRender function', () => {
     const output = createComponentDefinition(
@@ -48,16 +52,20 @@ export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-co
           },
         },
       ],
-    });
+    })
 
-    expect(output).toEqual(`
-export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-component',
-  [],
-  ['my-event'],
-  
-);
-`);
-  });
+    expect(output).toEqual(`export const MyComponent = /*@__PURE__*/ defineComponent({
+  name: 'my-component',
+  props: {
+
+  },
+  emits: {
+    my-event: (value: ) => true,
+  },
+  setup: defineSetup('my-component', ['my-event'], undefined)
+})
+`)
+  })
 
   it('should add a prop with Reference to the original component library prop type', () => {
     const output = createComponentDefinition(
@@ -86,16 +94,24 @@ export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-co
       tagName: 'my-component',
       methods: [],
       events: [],
-    });
+    })
 
-    expect(output).toEqual(`
-export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-component',
-  ['myProp'],
-  [],
-  
-);
-`);
-  });
+    expect(output).toEqual(`export const MyComponent = /*@__PURE__*/ defineComponent({
+  name: 'my-component',
+  props: {
+    myProp: {
+      type: String,
+      default: undefined,
+      required: false,
+    },
+  },
+  emits: {
+
+  },
+  setup: defineSetup('my-component', [], undefined)
+})
+`)
+  })
 
   it('should add a method with Reference to the original component library prop type', () => {
     const output = createComponentDefinition('Components', [
@@ -145,17 +161,29 @@ export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-co
           },
         },
       ],
-    });
+    })
 
-    expect(output).toEqual(`
-export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-component',
-  ['myProp'],
-  ['myChange'],
-  {
+    expect(output).toEqual(`export const MyComponent = /*@__PURE__*/ defineComponent({
+  name: 'my-component',
+  props: {
+    myProp: {
+      type: String,
+      default: undefined,
+      required: false,
+    },
+    modelValue: {
+      default: undefined,
+    },
+  },
+  emits: {
+    myChange: (value: ) => true,
+    'update:modelValue': (value: any) => true,
+  },
+  setup: defineSetup('my-component', ['myChange','update:modelValue'], {
     modelProp: 'myProp',
     modelUpdateEvent: 'myChange'
-  },
-);
-`);
-  });
-});
+  })
+})
+`)
+  })
+})
