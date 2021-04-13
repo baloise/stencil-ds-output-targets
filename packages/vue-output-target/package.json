@@ -1,6 +1,6 @@
 {
   "name": "@baloise/vue-output-target",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Vue 3 output target for @stencil/core components.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
