@@ -1,23 +1,23 @@
-import type { Config, OutputTargetCustom } from '@stencil/core/internal';
-import { normalizePath } from './utils';
-import type { OutputTargetVue } from './types';
-import { vueProxyOutput } from './output-vue';
-import path from 'path';
+import type { Config, OutputTargetCustom } from '@stencil/core/internal'
+import { normalizePath } from './utils'
+import type { OutputTargetVue } from './types'
+import { vueProxyOutput } from './output-vue'
+import path from 'path'
 
 export const vueOutputTarget = (outputTarget: OutputTargetVue): OutputTargetCustom => ({
   type: 'custom',
   name: 'vue-next-library',
   validate(config) {
-    return normalizeOutputTarget(config, outputTarget);
+    return normalizeOutputTarget(config, outputTarget)
   },
   async generator(config, compilerCtx, buildCtx) {
-    const timespan = buildCtx.createTimeSpan(`generate vue started`, true);
+    const timespan = buildCtx.createTimeSpan(`generate vue started`, true)
 
-    await vueProxyOutput(config, compilerCtx, outputTarget, buildCtx.components);
+    await vueProxyOutput(config, compilerCtx, outputTarget, buildCtx.components)
 
-    timespan.finish(`generate vue finished`);
+    timespan.finish(`generate vue finished`)
   },
-});
+})
 
 export function normalizeOutputTarget(config: Config, outputTarget: any) {
   const results: OutputTargetVue = {
@@ -26,18 +26,18 @@ export function normalizeOutputTarget(config: Config, outputTarget: any) {
     componentModels: outputTarget.componentModels || [],
     includePolyfills: outputTarget.includePolyfills ?? true,
     includeDefineCustomElements: outputTarget.includeDefineCustomElements ?? true,
-  };
+  }
 
   if (config.rootDir == null) {
-    throw new Error('rootDir is not set and it should be set by stencil itself');
+    throw new Error('rootDir is not set and it should be set by stencil itself')
   }
   if (outputTarget.proxiesFile == null) {
-    throw new Error('proxiesFile is required');
+    throw new Error('proxiesFile is required')
   }
 
   if (outputTarget.directivesProxyFile && !path.isAbsolute(outputTarget.directivesProxyFile)) {
-    results.proxiesFile = normalizePath(path.join(config.rootDir, outputTarget.proxiesFile));
+    results.proxiesFile = normalizePath(path.join(config.rootDir, outputTarget.proxiesFile))
   }
 
-  return results;
+  return results
 }
