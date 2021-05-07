@@ -38,7 +38,7 @@ export function generateProxies(
 /* tslint:disable */
 /* auto-generated vue proxies */
 import { defineSetup } from './vue-component-lib/utils';
-import * as Lib from '${normalizePath(outputTarget.componentCorePackage || '@baloise/ui-library')}';
+import * as Lib from '${normalizePath(outputTarget.componentCorePackage || '')}';
 import { defineComponent, PropType } from 'vue';`
 
   let sourceImports = ''

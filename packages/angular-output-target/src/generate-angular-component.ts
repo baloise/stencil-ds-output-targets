@@ -41,7 +41,7 @@ export const createComponentDefinition = (componentCorePackage: string, distType
     .filter((item, pos, self) => self.indexOf(item) === pos)
     .join(', ')
   if (outputsTypes.length > 0) {
-    outputsTypes = `import { ${outputsTypes} } from '@baloise/ui-library';`
+    outputsTypes = `import { ${outputsTypes} } from '${componentCorePackage}';`
   }
 
   const lines = [

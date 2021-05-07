@@ -136,7 +136,7 @@ export class MyComponent {
     } as ComponentCompilerMeta)
 
     expect(finalText).toEqual(`
-import { BalTabOption } from '@baloise/ui-library';
+import { BalTabOption } from 'component-library';
 export declare interface MyComponent extends Components.MyComponent {}
 
 @Component({
