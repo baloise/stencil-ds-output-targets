@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.11](https://github.com/baloise/stencil-ds-output-targets/compare/@baloise/angular-output-target@1.0.10...@baloise/angular-output-target@1.0.11) (2021-05-07)
+
+
+### Bug Fixes
+
+* remove ui-library and use variable instead ([f86568a](https://github.com/baloise/stencil-ds-output-targets/commit/f86568a27f9e2c80b35d1e201ab7822cc5e58d03))
+
+
+
+
+
 ## [1.0.10](https://github.com/baloise/stencil-ds-output-targets/compare/@baloise/angular-output-target@1.0.9...@baloise/angular-output-target@1.0.10) (2021-04-15)
 
 **Note:** Version bump only for package @baloise/angular-output-target

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/baloise/stencil-ds-output-targets/compare/@baloise/vue-output-target@0.1.2...@baloise/vue-output-target@0.1.3) (2021-05-07)
+
+
+### Bug Fixes
+
+* remove ui-library and use variable instead ([f86568a](https://github.com/baloise/stencil-ds-output-targets/commit/f86568a27f9e2c80b35d1e201ab7822cc5e58d03))
+
+
+
+
+
 ## [0.1.2](https://github.com/baloise/stencil-ds-output-targets/compare/@baloise/vue-output-target@0.1.1...@baloise/vue-output-target@0.1.2) (2021-04-15)
 
 **Note:** Version bump only for package @baloise/vue-output-target
