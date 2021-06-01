@@ -12,7 +12,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
-          fetch-depth: '0'
+          fetch-depth: "0"
 
       - name: Git Identity
         run: |
@@ -22,17 +22,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Fetch all Tags and Pull
-        run: |
-          git fetch --depth=1 origin +refs/tags/*:refs/tags/*
-          git pull
+      # - name: Fetch all Tags and Pull
+      #   run: |
+      #     git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      #     git pull
 
       - name: Authenticate with Registry
         run: |
           echo "registry=http://registry.npmjs.org/" > .npmrc
           echo //registry.npmjs.org/:_authToken=$NPM_TOKEN >> .npmrc
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
       - name: Clean install dependencies
         run: npm ci
@@ -40,15 +40,15 @@ jobs:
       - name: Build
         run: npm run build
 
-      - uses: EndBug/add-and-commit@v5
-        with:
-          message: 'chore(): update build artifacts'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - uses: EndBug/add-and-commit@v5
+      #   with:
+      #     message: "chore(): update build artifacts"
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to NPM
-        run: 'npm run release'
+        run: "npm run semantic-release"
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
