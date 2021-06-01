@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.13](https://github.com/baloise/stencil-ds-output-targets/compare/@baloise/angular-output-target@1.0.12...@baloise/angular-output-target@1.0.13) (2021-06-01)
+
+**Note:** Version bump only for package @baloise/angular-output-target
+
+
+
+
+
 ## [1.0.12](https://github.com/baloise/stencil-ds-output-targets/compare/@baloise/angular-output-target@1.0.11...@baloise/angular-output-target@1.0.12) (2021-05-07)
 
 **Note:** Version bump only for package @baloise/angular-output-target
